@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+      a.navbar-brand(href='/') Fix It
+      button.navbar-toggler(aria-expanded='false', aria-controls='navbarColor01', aria-label='Toggle navigation', type='button', data-toggle='collapse', data-target='#navbarColor01')
+        span.navbar-toggler-icon
+      #navbarColor01.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='/about/') About
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='/rules/') Rules
+
+    .container
+      block content
+
+      footer
+        .row
+          .col-xs-12
+            small &copy; Paul Moggridge 2019
+    script(src='/javascripts/jquery-3.4.1.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
