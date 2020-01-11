@@ -8,6 +8,7 @@ router.get('/fix', ctrlFixes.fixesListByUpvotes);
 router.post('/fix', ctrlFixes.fixesCreate);
 router.get('/fix/:fixid', ctrlFixes.fixesReadOne);
 router.put('/fix/:fixid', ctrlFixes.fixesUpdateOne);
+router.post('/fix/:fixid', ctrlFixes.fixesUpvote);
 router.delete('/fix/:fixid', ctrlFixes.fixesDeleteOne);
 
 // comments

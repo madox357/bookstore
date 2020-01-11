@@ -81,6 +81,34 @@ module.exports.fixesUpdateOne = function (req, res) {
         sendJsonResponse(res, 404, {'message': 'No fixid in request'});
     }
 };
+
+module.exports.fixesUpvote = function (req, res) {
+    if(req.params && req.params.fixid) {
+        Fix.findById(req.params.fixid).exec(
+            function(err, fix){
+                
+                if(!fix){
+                    sendJsonResponse(res, 404, {'message' : 'Fix not found'});
+                } else if (err){
+                    sendJsonResponse(res, 404, err);                
+                } else {
+                 
+                    fix.upvotes = fix.upvotes + 1;
+
+                    fix.save(function(err, fix){
+                        if(err){
+                            sendJsonResponse(res, 404, err);
+                        }else{
+                            sendJsonResponse(res, 200, fix);
+                        }
+                    });
+                    
+                }
+        });
+    }else{
+        sendJsonResponse(res, 404, {'message': 'No fixid in request'});
+    }
+};
 module.exports.fixesDeleteOne = function (req, res) {
     sendJsonResponse(res, 200, {"status" : "success"});
 };

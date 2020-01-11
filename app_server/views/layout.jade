@@ -6,7 +6,24 @@ html
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+      a.navbar-brand(href='/') Js Bookstore
+      button.navbar-toggler(aria-expanded='false', aria-controls='navbarColor01', aria-label='Toggle navigation', type='button', data-toggle='collapse', data-target='#navbarColor01')
+        span.navbar-toggler-icon
+      #navbarColor01.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item.navbar-dark.bg-primary
+            a.nav-link(href='/about/') About
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='/rules/') Rules
 
+    .container
+      block content
+
+      footer
+        .row
+          .col-xs-12
+            small &copy; Bijaya Limbu 2020
     script(src='/javascripts/jquery-3.4.1.min.js')
     script(src='/bootstrap/js/bootstrap.min.js')
