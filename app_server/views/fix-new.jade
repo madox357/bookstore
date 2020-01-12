@@ -7,7 +7,7 @@ block content
       h2= title
       form(method='POST', action='')
         fieldset
-          legend New Fix Request
+          legend Adding a new Book in the Library 
           .form-group
             label(for='inputName') Name
             input#inputName.form-control(aria-describedby='nameHelp', type='text', placeholder='Enter name', name='name')
@@ -23,5 +23,5 @@ block content
           .form-group
             label(for='inputSkills') Skills
             textarea#textareaSkills.form-control(rows='1', name='skills')
-             small#nameHelp.form-text.text-muted  Please state the least skills required with proper ettiquote. 
-          input.btn.btn-success(type='submit', value='Submit')
+            small#nameHelp.form-text.text-muted  Please state the least skills required with proper ettiquote. 
+            input.btn.btn-success(type='submit', value='Submit')
