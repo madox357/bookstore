@@ -7,7 +7,7 @@ var commentSchema = new mongoose.Schema({
 
 var fixSchema = new mongoose.Schema({
     name: String,
-    status: String,
+    language: String,
     summary: String,
     skills: [String],
     description: String,

@@ -3,7 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-require('./app_api/models/db'); // not assigning a variable since we are not exporting any functions
+/*To bring the file into the application by requiring it here*/
+require('./app_api/models/db'); 
 
 var indexRouter = require('./app_server/routes/index');
 var indexRouterApi = require('./app_api/routes/index');

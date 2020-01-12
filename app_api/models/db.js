@@ -1,24 +1,29 @@
+/*To require mongoose in this file*/
 var mongoose = require('mongoose');
 
-var dbURI = 'mongodb://localhost/fixit';
-
+/*To create connection to loc8r/fixit*/
+var dbURI = 'mongodb://localhost/Jslibrary';
 mongoose.connect(dbURI);
 
+/*Monitoring successful connection through Mongoose*/
 mongoose.connection.on('connected', function () {
     console.log('Mongoose connected to ' + dbURI);
 });
 
+/*Checking for connection error*/
 mongoose.connection.on('error', function (err) {
     console.log('Mongoose connection error ' + err);
 });
 
+/*Checking for disconnection event*/
 mongoose.connection.on('disconnected', function() {
     console.log('Mongoose disconnected');
 });
 
-gracefulShutdown = function (msg, callback) {
-    mongoose.connection.close( function () {
-        console.log('Mongoose disconnected through ' + msg);
+/*Closing Mongoose connection when app stops*/
+gracefulShutdown = function (msg, callback) { /*function accept message and callback function*/
+    mongoose.connection.close( function () { /*close mongoose connection*/
+        console.log('Mongoose disconnected through ' + msg); /*Message output to console*/
         callback();
     })
 };
