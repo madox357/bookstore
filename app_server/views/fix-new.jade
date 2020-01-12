@@ -15,10 +15,13 @@ block content
           .form-group
             label(for='inputSummary') Summary
             textarea#textareaSummary.form-control(rows='2', name='summary')
+            small#nameHelp.form-text.text-muted A brief explaination of the book's intention.
           .form-group
             label(for='inputDescription') Description
             textarea#textareaDescription.form-control(rows='6', name='description')
+            small#nameHelp.form-text.text-muted This is the description of your book.
           .form-group
             label(for='inputSkills') Skills
-            textarea#textareaSkills.form-control(rows='1', name='skills')  
+            textarea#textareaSkills.form-control(rows='1', name='skills')
+             small#nameHelp.form-text.text-muted  Please state the least skills required with proper ettiquote. 
           input.btn.btn-success(type='submit', value='Submit')
