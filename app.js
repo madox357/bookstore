@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-/*To bring the file into the application by requiring it here*/
+/*To bring the file into application by requiring it here*/
 require('./app_api/models/db'); 
 
 var indexRouter = require('./app_server/routes/index');

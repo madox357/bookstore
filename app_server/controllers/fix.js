@@ -108,7 +108,7 @@ module.exports.doFixUpvote = function(req, res) {
 }
 
 module.exports.addComment = function(req, res, next) {
-    res.render('fix-comment', { title: 'Add Comment', fixid: req.params.fixid });
+    res.render('fix-comment', { title: 'Add Comment', fixid: req.params.fixid });  //takes the name of the view template:fix-comment, and thejavascript object containing data for template to use
 };
 
 module.exports.doAddComment = function(req, res){
