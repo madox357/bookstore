@@ -6,13 +6,13 @@ var logger = require('morgan');
 /*To bring the file into application by requiring it here*/
 require('./app_api/models/db'); 
 
-var indexRouter = require('./app_server/routes/index');
-var indexRouterApi = require('./app_api/routes/index');
+var indexRouter = require('./app_server/routes/index');  /* added app_server after moving index js to a different directory*/
+var indexRouterApi = require('./app_api/routes/index');  /* added app_server after moving index js to a different directory*/
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'app_server', 'views'));
+app.set('views', path.join(__dirname, 'app_server', 'views'));  /* added app_server after moving index js to a different directory*/
 app.set('view engine', 'jade');
 
 app.use(logger('dev'));

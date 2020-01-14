@@ -66,9 +66,9 @@ module.exports.fixNew = function(req, res) {
     res.render('fix-new', { title: 'Create a New Book'});
 };
 
-module.exports.doFixNew = function(req, res){
+module.exports.doFixNew = function(req, res){   /** */
     var requestOptions, path, postData;  
-    path = '/api/fix' ;
+    path = '/api/fix';  /** */
     postData = {
         name: req.body.name,
         status: 'Fixing',   
