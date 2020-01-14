@@ -10,18 +10,20 @@ block content
           legend Adding a new Book in the Library 
           .form-group
             label(for='inputName') Name
-            input#inputName.form-control(aria-describedby='nameHelp', type='text', placeholder='Enter name', name='name')
+            input#inputName.form-control(aria-describedby='nameHelp', type='text', placeholder='Enter Book name & Author', name='name')
+            
             small#nameHelp.form-text.text-muted This is the name of your book.
           .form-group
             label(for='inputSummary') Summary
-            textarea#textareaSummary.form-control(rows='2', name='summary')
+            textarea#textareaSummary.form-control(rows='2', placeholder='What did you like about the book?', name='summary')
             small#nameHelp.form-text.text-muted A brief explaination of the book's intention.
           .form-group
             label(for='inputDescription') Description
-            textarea#textareaDescription.form-control(rows='6', name='description')
+            textarea#textareaDescription.form-control(rows='6', placeholder='Where do you think the author impressed you?', name='description')
             small#nameHelp.form-text.text-muted This is the description of your book.
           .form-group
             label(for='inputSkills') Skills
             textarea#textareaSkills.form-control(rows='1', name='skills')
-            small#nameHelp.form-text.text-muted  Please state the least skills required with proper ettiquote. 
+            small#nameHelp.form-text.text-muted  Polite notice: Please state the least skills required with proper ettiquote. 
+            br
             input.btn.btn-success(type='submit', value='Submit')
