@@ -1,6 +1,6 @@
 var request = require('request');
 var apiOptions = {
-    server : "http://localhost:3000"
+    server : "http://localhost:3000"    /**Set default server URL for local development */
 };
 
 var renderFixList = function(req, res, body){
@@ -36,7 +36,7 @@ module.exports.fixInfo = function(req, res, next) {
     }
 
     request(requestOptions,
-        function(apierr, apires, apibody){ 
+        function(apierr, apires, apibody){  //calling the api 
             if(apires.statusCode == 200){
                 renderFix(req, res, apibody);
             }

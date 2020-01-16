@@ -4,7 +4,7 @@ var ctrlFixes = require('../controllers/fix');
 var ctrlComments = require('../controllers/comment');
 
 // fixes
-router.get('/fix', ctrlFixes.fixesListByUpvotes);
+router.get('/fix', ctrlFixes.fixesListByUpvotes); /**gets the value of fixesListByUpvotes from fix.js*/
 router.post('/fix', ctrlFixes.fixesCreate);
 router.get('/fix/:fixid', ctrlFixes.fixesReadOne);
 router.put('/fix/:fixid', ctrlFixes.fixesUpdateOne);

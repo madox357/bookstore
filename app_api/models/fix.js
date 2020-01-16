@@ -1,8 +1,8 @@
 var mongoose = require( 'mongoose' );
 
 var commentSchema = new mongoose.Schema({
-    name: String,
-    comment: String
+    name: String,   /* */
+    comment: String     /* */
 });
 
 var fixSchema = new mongoose.Schema({
