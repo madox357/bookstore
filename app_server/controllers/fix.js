@@ -1,6 +1,6 @@
 var request = require('request');
 var apiOptions = {
-    server : "http://localhost:3000"    /**Set default server URL for local development */
+    server : "http://localhost:3000"
 };
 
 var renderFixList = function(req, res, body){
