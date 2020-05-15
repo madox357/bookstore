@@ -19,5 +19,17 @@
     "mongoose": "^5.7.10",
     "morgan": "~1.9.1",
     "request": "^2.88.0"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://bl18aat@dev.azure.com/bl18aat/bookstore/_git/bookstore"
+  },
+  "keywords": [
+    "resubmitting"
+  ],
+  "author": "Bijaya Limbu",
+  "license": "ISC",
+  "description": ""
 }
