@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 
 /*To create connection to loc8r/fixit*/
-var dbURI = 'mongodb://localhost/Jslibrary';
+var dbURI = 'mongodb://localhost/fixit';
 
 mongoose.connect(dbURI);
 
